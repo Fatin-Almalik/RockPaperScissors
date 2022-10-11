@@ -1,4 +1,4 @@
-.boxes {
+.boxes, .results {
     display: flex;justify-content: center;
     gap: 15px;
 }
@@ -8,4 +8,7 @@
     height: 150px;
     background-color:royalblue;
     text-align: center;
+    color: white;
+    display: grid;
+    align-items: center;
 }

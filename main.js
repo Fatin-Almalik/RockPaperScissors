@@ -2,7 +2,17 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
 
+rock.addEventListener('click', function(params) {gameWithUI('rock')});
+paper.addEventListener('click', function(params) {gameWithUI('paper')});
+scissors.addEventListener('click', function(params) {gameWithUI('scissors')});
 
+const roundText = document.querySelector('.round');
+
+function gameWithUI(playerPick) {
+    let computerChoice = getComputerChoice()
+    result = playRound(playerPick, computerChoice);
+    roundText.textContent = `Computer picked ${computerChoice}, you picked ${playerPick}. ${result}`;
+}
 
 
 function getComputerChoice() {
@@ -47,7 +57,7 @@ function game(rounds) {
     let playerScore = 0;
 
     for (let i = 0; i < rounds; i++) {
-        // let playerSelection = prompt("Rock, paper, or scissors?");
+        let playerSelection = prompt("Rock, paper, or scissors?");
         // uncomment this once checkPlayerInput() is fixed.
         // playerSelection = checkPlayerInput(playerSelection);
 
@@ -66,21 +76,4 @@ function game(rounds) {
 
 
 
-game(5); //Add feature: promote the user for the desired number of rounds
-
-
-
-
-// this function's while loop runs every round even when player input is correct, fix it and uncomment it
-// also add handling for null when canceling/hitting ESC.
-// function checkPlayerInput(playerInput) {
-//     playerInput = playerInput.toLowerCase();
-    
-//     while (!(playerInput == 'paper') || !(playerInput == 'rock') || !(playerInput == 'scissors')) {
-//         playerInput = prompt("Please enter paper, rock, or scissors:")
-//         playerInput = playerInput.toLowerCase();
-//         break;
-//     }
-    
-//     return playerInput
-// }
+// game(5);
