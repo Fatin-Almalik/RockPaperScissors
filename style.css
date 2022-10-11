@@ -1,6 +1,22 @@
-.boxes, .results {
-    display: flex;justify-content: center;
+h2, h3 {
+    text-align: center;
+
+}
+.boxes {
+    display: flex;
+    justify-content: center;
     gap: 15px;
+}
+
+.results {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin: 8px;
 }
 
 .box {
