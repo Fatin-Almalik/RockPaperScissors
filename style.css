@@ -1,0 +1,11 @@
+.boxes {
+    display: flex;justify-content: center;
+    gap: 15px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color:royalblue;
+    text-align: center;
+}

@@ -1,3 +1,10 @@
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+
+
+
+
 function getComputerChoice() {
     const list = ['rock', 'paper', 'scissors']
     return list[Math.floor(Math.random()*list.length)];
@@ -29,19 +36,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// this function's while loop runs every round even when player input is correct, fix it and uncomment it
-// also add handling for null when canceling/hitting ESC.
-// function checkPlayerInput(playerInput) {
-//     playerInput = playerInput.toLowerCase();
-    
-//     while (!(playerInput == 'paper') || !(playerInput == 'rock') || !(playerInput == 'scissors')) {
-//         playerInput = prompt("Please enter paper, rock, or scissors:")
-//         playerInput = playerInput.toLowerCase();
-//         break;
-//     }
-    
-//     return playerInput
-// }
+
 
 function game(rounds) {
     //get user input using prompt()
@@ -52,7 +47,7 @@ function game(rounds) {
     let playerScore = 0;
 
     for (let i = 0; i < rounds; i++) {
-        let playerSelection = prompt("Rock, paper, or scissors?");
+        // let playerSelection = prompt("Rock, paper, or scissors?");
         // uncomment this once checkPlayerInput() is fixed.
         // playerSelection = checkPlayerInput(playerSelection);
 
@@ -72,3 +67,20 @@ function game(rounds) {
 
 
 game(5); //Add feature: promote the user for the desired number of rounds
+
+
+
+
+// this function's while loop runs every round even when player input is correct, fix it and uncomment it
+// also add handling for null when canceling/hitting ESC.
+// function checkPlayerInput(playerInput) {
+//     playerInput = playerInput.toLowerCase();
+    
+//     while (!(playerInput == 'paper') || !(playerInput == 'rock') || !(playerInput == 'scissors')) {
+//         playerInput = prompt("Please enter paper, rock, or scissors:")
+//         playerInput = playerInput.toLowerCase();
+//         break;
+//     }
+    
+//     return playerInput
+// }
